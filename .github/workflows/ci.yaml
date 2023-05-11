@@ -10,7 +10,8 @@ on:
 
 jobs:
   build_test:
-
+    env:
+      headless: true
     runs-on: ubuntu-latest
 
     steps:
@@ -25,3 +26,11 @@ jobs:
       id: setup-chrome
     - name: Build with Maven
       run: mvn clean install -DskipTests
+    - name: Run with Maven
+      run: mvn test -Dfile=testng.xml -Dheadless=${headless}
+    - name: Archive Test Results 
+      if: always()
+      uses: actions/upload-artifact@v1
+      with:
+        name: test-results
+        path: ./target/surefire-reports
