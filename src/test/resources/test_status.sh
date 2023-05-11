@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-TEST_RESULTS_REPORT_DIR="${1:-/Users/SeleniumPrometheusIntegration/target/surefire-reports/}"
+TEST_RESULTS_REPORT_DIR="${1:-/home/runner/work/SeleniumPrometheusIntegration/SeleniumPrometheusIntegration/target/surefire-reports}"
 echo "Output Repository is $TEST_RESULTS_REPORT_DIR"
 #<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
 TEST_REPORT=$(cat "$TEST_RESULTS_REPORT_DIR/testng-results.xml" | grep "<testng-results")
