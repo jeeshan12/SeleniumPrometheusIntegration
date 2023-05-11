@@ -19,12 +19,9 @@ public class LoginPageTest {
         ChromeOptions chromeOptions = new ChromeOptions();
         if (isHeadless) {
             chromeOptions.addArguments("--headless=new");
-            chromeOptions.addArguments("--no-sandbox");
-            chromeOptions.addArguments("--disable-dev-shm-usage");
-
+        
         }
         this.driver = new ChromeDriver(chromeOptions);
-        this.driver = new ChromeDriver();
 
     }
 
