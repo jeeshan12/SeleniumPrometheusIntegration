@@ -26,8 +26,8 @@ jobs:
          env:
           PUSHGATEWAY_IP: ${{ secrets.PUSHGATEWAY_IP }}
          run : |
-           ls /home/runner/work/SeleniumPrometheusIntegration/SeleniumPrometheusIntegration
-           cat ${GITHUB_WORKSPACE}
+           cd "${GITHUB_WORKSPACE}/src/test/resources/"
+           ls
            sh test_status.sh testng-results.xml
          
       
