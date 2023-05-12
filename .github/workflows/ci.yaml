@@ -11,3 +11,5 @@ on:
 jobs:
   test:
     uses: jeeshan12/resusable_workflows/.github/workflows/selenium.yml@main
+    with:
+      fileName: testng.xml
