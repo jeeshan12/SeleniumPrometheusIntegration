@@ -24,7 +24,8 @@ jobs:
             name: test-results
        - name: Collect Ressults
          run : |
-           cat testng.xml
+           sh chmod+x test_status.sh
+           sh test_status.sh testng-results.xml
          
       
      
