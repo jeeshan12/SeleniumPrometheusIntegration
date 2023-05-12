@@ -1,6 +1,6 @@
 
 
-name: Selenium Prometheus Monitoring
+name: Selenium Prometheus Monitoring for UI Tests
 
 on:
   push:
