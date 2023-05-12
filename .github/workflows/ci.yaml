@@ -13,3 +13,13 @@ jobs:
     uses: jeeshan12/resusable_workflows/.github/workflows/selenium.yml@main
     with:
       fileName: testng.xml
+  monitoring:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - name: Collect Ressults
+         run : |
+           ls
+         
+      
+     
