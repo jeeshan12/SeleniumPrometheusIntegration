@@ -23,7 +23,7 @@ jobs:
             name: test-results
        - name: Collect Ressults
          run : |
-           ls
+           cat testng.xml
          
       
      
