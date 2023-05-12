@@ -28,7 +28,7 @@ jobs:
          run : |
            cd "${GITHUB_WORKSPACE}/src/test/resources/"
            ls
-           sh test_status.sh testng-results.xml
+           sh "${GITHUB_WORKSPACE}/src/test/resources/test_status.sh" testng-results.xml
          
       
      
