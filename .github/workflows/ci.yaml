@@ -26,8 +26,7 @@ jobs:
          env:
           PUSHGATEWAY_IP: ${{ secrets.PUSHGATEWAY_IP }}
          run : |
-           cd "${GITHUB_WORKSPACE}/src/test/resources/"
-           ls
+           cat "${GITHUB_WORKSPACE}/testng-results.xml"
            sh "${GITHUB_WORKSPACE}/src/test/resources/test_status.sh" testng-results.xml
          
       
