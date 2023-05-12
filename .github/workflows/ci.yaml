@@ -23,8 +23,9 @@ jobs:
          with:
             name: test-results
        - name: Collect Ressults
+         env:
+          PUSHGATEWAY_IP: ${{ secrets.PUSHGATEWAY_IP }}
          run : |
-           sh chmod+x test_status.sh
            sh test_status.sh testng-results.xml
          
       
