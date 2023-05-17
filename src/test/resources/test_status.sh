@@ -19,7 +19,7 @@ selenium_suite_execution_duration{action_id="${GITHUB_RUN_NUMBER}", author="${GI
 EOF
 
 
-#cat << EOF | curl --data-binary @- http://localhost:9091/metrics/job /my_job/instance/my_instance
-#temperature{location="room1"} 31
-#temperature{location="room2"} 33 # TYPE my_metric gauge
+#cat << EOF | curl --data-binary @- http://${PUSHGATEWAY_IP}/metrics/job /test_job
+#failedTests{author="jeeshan"} 10
+#passedTests{author="jeeshan"} 33 
 #EOF
